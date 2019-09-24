@@ -7,7 +7,7 @@ var questionOne = prompt('Was I born January?');
 
 if(questionOne.toLowerCase() === 'yes') {
     //console.log('You are correct!')
-    alert('You are correct!')
+    alert('You are correct!');
 } else if(questionOne.toLowerCase() === 'no') {
     //console.log('Sorry that is incorrect..');
     alert('Sorry that is incorrect');
@@ -17,7 +17,7 @@ var questionTwo = prompt('Do I like cats more than dogs?');
 
 if(questionTwo.toLowerCase() === 'no') {
     //console.log('You are correct!')
-    alert('You are correct!')
+    alert('You are correct!');
 } else if(questionTwo.toLowerCase() === 'yes') {
     //console.log('Sorry that is incorrect..');
     alert('Sorry that is incorrect');
@@ -27,7 +27,7 @@ var questionThree = prompt('Am I from California?');
 
 if(questionThree.toLowerCase() === 'no') {
     //console.log('You are correct!')
-    alert('You are correct!')
+    alert('You are correct!');
 } else if(questionThree.toLowerCase() === 'yes') {
     //console.log('Sorry that is incorrect..');
     alert('Sorry that is incorrect');
@@ -37,7 +37,7 @@ var questionFour = prompt('Is my favorite sport rugby?');
 
 if(questionFour.toLowerCase() === 'yes') {
     //console.log('You are correct!')
-    alert('You are correct!')
+    alert('You are correct!');
 } else if(questionFour.toLowerCase() === 'no') {
    // console.log('Sorry that is incorrect..');
    alert('Sorry that is incorrect');
@@ -48,7 +48,7 @@ if(questionFour.toLowerCase() === 'yes') {
  
  if(questionFour.toLowerCase() === 'yes') {
     //console.log('You are correct!')
-    alert('You are correct!')
+    alert('You are correct!');
 } else if(questionFour.toLowerCase() === 'no') {
     //console.log('Sorry that is incorrect..');
     alert('Sorry that is incorrect');
