@@ -33,13 +33,18 @@ h1 {
 }
 
 h2 {
-    color: purple;
+    color: white;
+    text-shadow:
+        -1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
     text-decoration: underline;
 }
 
 #intro {
     text-align: center;
-    background-color: white;
+    background-color: rgb(115, 144, 189);
 }
 
 div {
@@ -49,14 +54,15 @@ div {
     background-color: gray;
 }
 
-p {
-    color: blue;
+#intropara {
+    color:black;
+    font-weight: bold;
 }
 
 ul {
-    color: yellow;
+    color:black;
 }
 
 ol {
-    color:red;
+    color: black;
 }
