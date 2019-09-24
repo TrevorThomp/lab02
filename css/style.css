@@ -1,11 +1,33 @@
 body {
-    background-color: beige;
+    background-color: white;
+}
+
+
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "edu work"
+        "goal goal";
+}
+
+#edu{
+    grid-area: edu;
+}
+
+#work {
+    grid-area: work;
+}
+
+#goal {
+    grid-area: goal;
 }
 
 h1 {
     font-size: 2.5em;
     font-weight: bold;
-    color: rgb(10, 22, 128);
+    color: black);
     text-align: center;
 
 }
@@ -23,8 +45,8 @@ h2 {
 div {
     border: 2px solid black;
     margin: 3px;
-    padding: 3px;
-    background-color: rgb(156, 156, 245)
+    padding: 5px;
+    background-color: gray;
 }
 
 p {
