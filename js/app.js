@@ -61,17 +61,17 @@ var guessAttempts = 0;
 do {
     var questionSix = prompt('Guess a number between 1 and 10');
     if(parseInt(questionSix) === correctNumber) {
-        console.log('you are correct!');
         alert('You are correct!');
         guessAttempts = 4;
     } else if(parseInt(questionSix) > 7) {
         guessAttempts++;
-        console.log('Too High' + guessAttempts);
     } else {
         guessAttempts++;
-        console.log('Too Low' + guessAttempts);
     }
 }while (guessAttempts < 4);
+
+var correctColor = [Red, Green, Blue, Black, Gold, White]
+var questionSeven = prompt('Name a color on the South African flag');
 
 
 // if(questionSix === 7) {
