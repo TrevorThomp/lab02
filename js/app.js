@@ -55,39 +55,60 @@
 // }
 
 
-var correctNumber = 7;
-var count = 0;
-var userGuess = false;
+// var correctNumber = 7;
+// var count = 0;
+// var userGuess = false;
 
-while ( (!userGuess) && (count < 4)) {
+// while ( (!userGuess) && (count < 4) ) {
     
-    var questionSix = prompt('Guess a number between 1 and 10');
-    var tries;
+//     var questionSix = prompt('Guess a number between 1 and 10');
+//     var tries;
 
-    if(parseInt(questionSix) === correctNumber) {
-        alert('You are correct!');
-        userGuess = true;
-    } else if(parseInt(questionSix) > 7) {
-        count++;
-        alert('To high! Try again! ' + (4 - count) + ' attempts left');
-    } else if(parseInt(questionSix) < 7) {
-        count++;
-        alert('To low! Try again! ' + (4 - count) + ' attempts left');
-    } 
-    if(count === 4) {
-        alert('All out of tries. The correct number was 7.');
-    } 
-}
+//     if(parseInt(questionSix) === correctNumber) {
+//         alert('You are correct!');
+//         userGuess = true;
+//     } else if(parseInt(questionSix) > 7) {
+//         count++;
+//         alert('To high! Try again! ' + (4 - count) + ' attempts left');
+//     } else if(parseInt(questionSix) < 7) {
+//         count++;
+//         alert('To low! Try again! ' + (4 - count) + ' attempts left');
+//     } 
+//     if(count === 4) {
+//         alert('All out of tries. The correct number was 7.');
+//     } 
+// }
 
 
 
-var correctColor = [Red, Green, Blue, Black, Gold, White];
-count = 0;
-userGuess = false;
+var correctColors = ['red', 'green', 'blue', 'black', 'gold', 'white'];
+var countFlag = 0;
 
-while ( (!userGuess) && (count < 6) ) {
 
+while(countFlag < 6) {
     var questionSeven = prompt('Name a color on the South African flag');
+
+    for(var a = 0; a < 6; a++) {
+        if(questionSeven.toLowerCase() === correctColors[a]) {
+            var userGuess2 = true;
+            break;
+        }
+        if(userGuess2 = true) {
+            alert('That is correct!')
+            countFlag = 6;
+            break;
+        } else {
+            alert('Sorry try again');
+            countFlag++;
+            console.log(a);
+            console.log(countFlag);
+        } 
+    }  
+    
+       
+    
+
+    
 }
 
 
