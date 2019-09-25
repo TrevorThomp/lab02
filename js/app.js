@@ -56,42 +56,31 @@
 
 
 var correctNumber = 7;
-var q6Attempts = 0;
 var count = 0;
+var userGuess = false;
 
-while (q6Attempts < 4) {
+while ( (!userGuess) && (count < 4)) {
     var questionSix = prompt('Guess a number between 1 and 10');
     var tries;
+
     if(parseInt(questionSix) === correctNumber) {
         alert('You are correct!');
-        q6Attempts = 4;
+        userGuess = true;
     } else if(parseInt(questionSix) > 7) {
         count++;
-        q6Attempts++;
         tries = alert('To high! Try again! ' + (4 - count) + ' attempts left');
-    } else {
+    } else if(parseInt(questionSix) < 7) {
         count++;
-        q6Attempts++;
         tries = alert('To low! Try again! ' + (4 - count) + ' attempts left');
-    }
+    } 
+    if(count === 4) {
+        alert('All out of tries. The correct number was 7.');
+    } 
 }
 
-// do {
-//     var questionSix = prompt('Guess a number between 1 and 10');
-//     var tries;
-//     if(parseInt(questionSix) === correctNumber) {
-//         alert('You are correct!');
-//         q6Attempts = 4;
-//     } else if(parseInt(questionSix) > 7) {
-//         count++;
-//         q6Attempts++;
-//         tries = alert('To high! Try again! ' + (4 - count) + ' attempts left');
-//     } else {
-//         count++;
-//         q6Attempts++;
-//         tries = alert('To low! Try again! ' + (4 - count) + ' attempts left');
-//     }
-// }while(q6Attempts < 4);
+
+
+
 
 // var correctColor = [Red, Green, Blue, Black, Gold, White];
 // var q7Attempts = 0;
