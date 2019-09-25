@@ -56,22 +56,33 @@
 
 
 var correctNumber = 7;
-var guessAttempts = 0;
+var q6Attempts = 0;
+var count = 0;
+
 
 do {
     var questionSix = prompt('Guess a number between 1 and 10');
+    var tries;
     if(parseInt(questionSix) === correctNumber) {
         alert('You are correct!');
-        guessAttempts = 4;
+        q6Attempts = 4;
     } else if(parseInt(questionSix) > 7) {
-        guessAttempts++;
+        count++;
+        q6Attempts++;
+        tries = alert('To high! Try again! ' + (4 - count) + ' attempts left');
     } else {
-        guessAttempts++;
+        count++;
+        q6Attempts++;
+        tries = alert('To low! Try again! ' + (4 - count) + ' attempts left');
     }
-}while (guessAttempts < 4);
+}while(q6Attempts < 4);
 
-var correctColor = [Red, Green, Blue, Black, Gold, White]
-var questionSeven = prompt('Name a color on the South African flag');
+// var correctColor = [Red, Green, Blue, Black, Gold, White];
+// var 
+// do {
+// var questionSeven = prompt('Name a color on the South African flag');
+
+// }while();
 
 
 // if(questionSix === 7) {
