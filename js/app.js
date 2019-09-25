@@ -87,23 +87,26 @@ var countFlag = 0;
 
 while(countFlag < 6) {
     var questionSeven = prompt('Name a color on the South African flag');
-
+    var userGuess2 = false;
+    
     for(var a = 0; a < 6; a++) {
         if(questionSeven.toLowerCase() === correctColors[a]) {
             var userGuess2 = true;
-            break;
-        }
-        if(userGuess2 = true) {
+            console.log(userGuess2);
+        }  
+    }
+        if(userGuess2 === true) {
             alert('That is correct!')
             countFlag = 6;
             break;
-        } else {
+        } 
+        if(userGuess2 === false) {
             alert('Sorry try again');
             countFlag++;
-            console.log(a);
-            console.log(countFlag);
-        } 
-    }  
+           
+        }
+        
+      
     
        
     
