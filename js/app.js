@@ -1,63 +1,33 @@
 'use strict';
-var totalCorrect = 0;
 
 var userName = prompt('Hi, What is your name?')
-alert('Hello, ' + userName + '! Please answer the following questions using yes or no.');
+alert('Hello, ' + userName + '! Welcome to my site!');
+alert('Please answer the following questions using yes or no.');
 
-var questionOne = prompt('Was I born January?');
+var question;
+var answers;
+var response;
+var totalCorrect = 0;
 
-if(questionOne.toLowerCase() === 'yes') {
-    //console.log('You are correct!')
+var quiz = 
+[
+  ['Was I born in January?', 'yes'],
+  ['Do I like cat more than dogs?', 'no'],
+  ['Am I from California?', 'no'],
+  ['Is my favorite sport Rugby?', 'yes'],
+  ['Do I have blue eyes', 'yes']
+];
+
+for(var i = 0; i < quiz.length; i++) {
+  question = quiz[i][0];
+  answers = quiz[i][1];
+  response = prompt(question);
+  if(response.toLowerCase() === answers){
     alert('You are correct!');
     totalCorrect++;
-} else if(questionOne.toLowerCase() === 'no') {
-    //console.log('Sorry that is incorrect..');
+  } else {
     alert('Sorry that is incorrect');
-} 
-
-var questionTwo = prompt('Do I like cats more than dogs?');
-
-if(questionTwo.toLowerCase() === 'no') {
-    //console.log('You are correct!')
-    alert('You are correct!');
-    totalCorrect++;
-} else if(questionTwo.toLowerCase() === 'yes') {
-    //console.log('Sorry that is incorrect..');
-    alert('Sorry that is incorrect');
-}
-
-var questionThree = prompt('Am I from California?');
-
-if(questionThree.toLowerCase() === 'no') {
-    //console.log('You are correct!')
-    alert('You are correct!');
-    totalCorrect++;
-} else if(questionThree.toLowerCase() === 'yes') {
-    //console.log('Sorry that is incorrect..');
-    alert('Sorry that is incorrect');
-}
-
-var questionFour = prompt('Is my favorite sport rugby?');
-
-if(questionFour.toLowerCase() === 'yes') {
-    //console.log('You are correct!')
-    alert('You are correct!');
-    totalCorrect++;
-} else if(questionFour.toLowerCase() === 'no') {
-   // console.log('Sorry that is incorrect..');
-   alert('Sorry that is incorrect');
-
-}
-
- var questionFive = prompt('Do I have blue eyes?');
- 
- if(questionFour.toLowerCase() === 'yes') {
-    //console.log('You are correct!')
-    alert('You are correct!');
-    totalCorrect++;
-} else if(questionFour.toLowerCase() === 'no') {
-    //console.log('Sorry that is incorrect..');
-    alert('Sorry that is incorrect');
+  }
 }
 
 
@@ -82,7 +52,7 @@ while ( (!userGuess) && (count < 4) ) {
         alert('To low! Try again! ' + (4 - count) + ' attempts left');
     } 
     if(count === 4) {
-        alert('All out of tries. The correct number was 7.');
+        alert('All out of tries. The correct number was ' + correctNumber + '.');
     } 
 }
 
@@ -99,7 +69,6 @@ while(countFlag < 6) {
     for(var a = 0; a < 6; a++) {
         if(questionSeven.toLowerCase() === correctColors[a]) {
             var userGuess2 = true;
-            console.log(userGuess2);
         }  
     }
         if(userGuess2 === true) {
@@ -120,4 +89,5 @@ while(countFlag < 6) {
 }
 
 
-alert('Well done ' + userName + '! Thanks for visiting and taking my quiz! You got ' + totalCorrect + ' out of 7 correct');
+alert('Well done ' + userName + '! You got ' + totalCorrect + ' out of 7 correct');
+alert('Thanks for visiting and taking my quiz!');
