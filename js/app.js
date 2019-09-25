@@ -96,21 +96,18 @@ while(countFlag < 6) {
         }  
     }
         if(userGuess2 === true) {
-            alert('That is correct!')
+            alert('That is correct! The other possibilities were ' + correctColors.toLocaleString() + '.')
             countFlag = 6;
             break;
         } 
         if(userGuess2 === false) {
-            alert('Sorry try again');
             countFlag++;
+            alert('Sorry try again. ' + (6 - countFlag) + ' attempts left');
            
         }
-        
-      
-    
-       
-    
-
+        if(countFlag === 6) {
+            alert('All out of tries. The answers were ' + correctColors.toLocaleString() + '.')
+        }
     
 }
 
