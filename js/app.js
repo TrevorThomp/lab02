@@ -60,6 +60,7 @@ var count = 0;
 var userGuess = false;
 
 while ( (!userGuess) && (count < 4)) {
+    
     var questionSix = prompt('Guess a number between 1 and 10');
     var tries;
 
@@ -68,10 +69,10 @@ while ( (!userGuess) && (count < 4)) {
         userGuess = true;
     } else if(parseInt(questionSix) > 7) {
         count++;
-        tries = alert('To high! Try again! ' + (4 - count) + ' attempts left');
+        alert('To high! Try again! ' + (4 - count) + ' attempts left');
     } else if(parseInt(questionSix) < 7) {
         count++;
-        tries = alert('To low! Try again! ' + (4 - count) + ' attempts left');
+        alert('To low! Try again! ' + (4 - count) + ' attempts left');
     } 
     if(count === 4) {
         alert('All out of tries. The correct number was 7.');
@@ -80,14 +81,16 @@ while ( (!userGuess) && (count < 4)) {
 
 
 
+var correctColor = [Red, Green, Blue, Black, Gold, White];
+count = 0;
+userGuess = false;
+
+while ( (!userGuess) && (count < 6) ) {
+
+    var questionSeven = prompt('Name a color on the South African flag');
+}
 
 
-// var correctColor = [Red, Green, Blue, Black, Gold, White];
-// var q7Attempts = 0;
-// do {
-// var questionSeven = prompt('Name a color on the South African flag');
-
-// }while();
 
 
 // if(questionSix === 7) {
