@@ -61,7 +61,7 @@ if(questionFour.toLowerCase() === 'yes') {
 }
 
 
-var correctNumber = 7;
+var correctNumber = Math.floor(Math.random() * 10);
 var count = 0;
 var userGuess = false;
 
@@ -74,10 +74,10 @@ while ( (!userGuess) && (count < 4) ) {
         alert('You are correct!');
         userGuess = true;
         totalCorrect++;
-    } else if(parseInt(questionSix) > 7) {
+    } else if(parseInt(questionSix) > correctNumber) {
         count++;
         alert('To high! Try again! ' + (4 - count) + ' attempts left');
-    } else if(parseInt(questionSix) < 7) {
+    } else if(parseInt(questionSix) < correctNumber) {
         count++;
         alert('To low! Try again! ' + (4 - count) + ' attempts left');
     } 
