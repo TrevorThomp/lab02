@@ -1,5 +1,7 @@
 'use strict';
 
+var totalCorrect = 0; //global variable to track total correct answers
+
 //Username and welcome prompts
 var userName = prompt('Hi, What is your name?')
 alert('Hello, ' + userName + '! Welcome to my site!');
@@ -9,7 +11,7 @@ alert('Please answer the following questions using yes or no.');
 var question;
 var answers;
 var response;
-var totalCorrect = 0;
+
 
 var quiz = 
 [
