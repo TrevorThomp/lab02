@@ -67,26 +67,26 @@ var countFlag = 0;
 while(countFlag < 6) {
     var questionSeven = prompt('Name a color on the South African flag');
     var userGuess2 = false;
-    
-    for(var a = 0; a < 6; a++) {
+
+    for(var a = 0; a < correctColors.length ; a++) {
         if(questionSeven.toLowerCase() === correctColors[a]) {
             userGuess2 = true;
         }  
-        }
-        if(userGuess2 === true) {
-            alert('That is correct! The other possibilities were ' + correctColors.toLocaleString() + '.')
-            countFlag = 6;
-            totalCorrect++;
-            break;
-        } 
-        if(userGuess2 === false) {
-            countFlag++;
-            alert('Sorry try again. ' + (6 - countFlag) + ' attempts left');
-           
-        }
-        if(countFlag === 6) {
-            alert('All out of tries. The answers were ' + correctColors.toLocaleString() + '.')
-        }
+    }
+    if(userGuess2 === true) {
+        alert('That is correct! The other possibilities were ' + correctColors.toLocaleString() + '.')
+        countFlag = 6;
+        totalCorrect++;
+        break;
+    } 
+    if(userGuess2 === false) {
+        countFlag++;
+        alert('Sorry try again. ' + (6 - countFlag) + ' attempts left');
+        
+    }
+    if(countFlag === 6) {
+        alert('All out of tries. The answers were ' + correctColors.toLocaleString() + '.')
+    }
     
 }
 
