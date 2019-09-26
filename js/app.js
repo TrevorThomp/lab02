@@ -24,21 +24,23 @@ function yesNo() {
     var question;
     var answers;
     var response;
+    var answersAbb;
 
     var quiz = 
     [
-    ['Was I born in January?', 'yes'],
-    ['Do I like cat more than dogs?', 'no'],
-    ['Am I from California?', 'no'],
-    ['Is my favorite sport Rugby?', 'yes'],
-    ['Do I have blue eyes', 'yes']
+    ['Was I born in January?', 'yes', 'y'],
+    ['Do I like cat more than dogs?', 'no', 'n'],
+    ['Am I from California?', 'no', 'n'],
+    ['Is my favorite sport Rugby?', 'yes', 'y'],
+    ['Do I have blue eyes', 'yes', 'y']
     ];
 
     for(var i = 0; i < quiz.length; i++) {
         question = quiz[i][0];
         answers = quiz[i][1];
+        answersAbb = quiz[i][2];
         response = prompt(question);
-    if(response.toLowerCase() === answers){
+    if(response.toLowerCase() === answers || response.toLowerCase() === answersAbb){
         alert('You are correct!');
         totalCorrect++;
     } else {
