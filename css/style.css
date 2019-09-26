@@ -9,7 +9,7 @@ section {
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
         "edu work"
-        "goal goal";
+        "goal top10";
 }
 
 #edu{
@@ -22,6 +22,10 @@ section {
 
 #goal {
     grid-area: goal;
+}
+
+#top10 {
+    grid-area: top10;
 }
 
 h1 {

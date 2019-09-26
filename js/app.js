@@ -1,9 +1,11 @@
 'use strict';
 
+//Username and welcome prompts
 var userName = prompt('Hi, What is your name?')
 alert('Hello, ' + userName + '! Welcome to my site!');
 alert('Please answer the following questions using yes or no.');
 
+//questions 1-5
 var question;
 var answers;
 var response;
@@ -30,7 +32,7 @@ for(var i = 0; i < quiz.length; i++) {
   }
 }
 
-
+//question 6 with random number generator
 var correctNumber = Math.floor(Math.random() * 10);
 var count = 0;
 var userGuess = false;
@@ -40,14 +42,14 @@ while ( (!userGuess) && (count < 4) ) {
     var questionSix = prompt('Guess a number between 1 and 10');
     var tries;
 
-    if(parseInt(questionSix) === correctNumber) {
+    if(parseInt(questionSix, 10) === correctNumber) {
         alert('You are correct!');
         userGuess = true;
         totalCorrect++;
-    } else if(parseInt(questionSix) > correctNumber) {
+    } else if(parseInt(questionSix, 10) > correctNumber) {
         count++;
         alert('To high! Try again! ' + (4 - count) + ' attempts left');
-    } else if(parseInt(questionSix) < correctNumber) {
+    } else if(parseInt(questionSix, 10) < correctNumber) {
         count++;
         alert('To low! Try again! ' + (4 - count) + ' attempts left');
     } 
@@ -57,7 +59,7 @@ while ( (!userGuess) && (count < 4) ) {
 }
 
 
-
+//question 7 with multiple possible answers
 var correctColors = ['red', 'green', 'blue', 'black', 'gold', 'white'];
 var countFlag = 0;
 
@@ -68,9 +70,9 @@ while(countFlag < 6) {
     
     for(var a = 0; a < 6; a++) {
         if(questionSeven.toLowerCase() === correctColors[a]) {
-            var userGuess2 = true;
+            userGuess2 = true;
         }  
-    }
+        }
         if(userGuess2 === true) {
             alert('That is correct! The other possibilities were ' + correctColors.toLocaleString() + '.')
             countFlag = 6;
@@ -88,6 +90,6 @@ while(countFlag < 6) {
     
 }
 
-
+//ending statements
 alert('Well done ' + userName + '! You got ' + totalCorrect + ' out of 7 correct');
 alert('Thanks for visiting and taking my quiz!');
